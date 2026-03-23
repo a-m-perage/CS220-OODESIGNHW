@@ -1,35 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Player = void 0;
 //used in accounting
-import { currentPlayer } from "./BlackJackMain";
-import { Card } from './Deck';
-
+const BlackJackMain_1 = require("./BlackJackMain");
 //Class to manage player/dealer 
-export class Player {
-
-    //Fields go here
-    name: string;
-    score: number;
-    ace: boolean;
-    parray: any[];
-
+class Player {
     //ace bool used as flag
-    constructor (name:string, score:number, ace:boolean, parray: any[]) {
+    constructor(name, score, ace, parray) {
         this.name = name;
         this.score = score;
         this.ace = ace;
         //array used to hold current cards
         this.parray = parray;
     }
-
     //function handles the adding of scores per player and the flagging of aces
-    accounting(object: Card): void {
-
+    accounting(object) {
         if (object.Ace == true) {
             //send notice to ace flag func in Deck
-            
-        } 
-        currentPlayer.score += object.value;
-        
-        
+        }
+        BlackJackMain_1.currentPlayer.score += object.value;
     }
-
 }
+exports.Player = Player;
