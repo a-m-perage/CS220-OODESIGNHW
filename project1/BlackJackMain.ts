@@ -1,7 +1,7 @@
 //Game start
 
 
-https://github.com/a-m-perage/CS220-OODESIGNHW
+//https://github.com/a-m-perage/CS220-OODESIGNHW
 
 
 import * as readline from 'readline-sync';
